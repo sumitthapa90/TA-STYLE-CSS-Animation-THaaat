@@ -1,0 +1,102 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  perspective: 600px;
+  min-height: 100vh;
+  transition: all 3s;
+  background-color: #f69d3c;
+  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  
+}
+
+body:hover {
+    perspective: 900px;
+  }
+
+.avengers {
+  margin-top: 5rem;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  transition: all 10s;
+  transform: rotateZ(0) rotateX(0) rotateY(0);
+  transform-style: preserve-3d;
+}
+
+.avengers:hover {
+  transform: rotateZ(0deg) rotateX(90deg) rotateY(310deg);
+}
+.faces {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 3s;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.faces:nth-child(1) {
+  background-image: url(./assets/IRON-2008-d7a2706.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center top;
+  transform: rotate(90deg) translateX(-150px);
+}
+
+.faces:nth-child(2) {
+  background-image: url(./assets/the-details-hidden-in-Thor-1-and-2.img.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center left;
+  transform: rotate(90deg) translateX(-150px);
+}
+
+.faces:nth-child(3) {
+  background-image: url(./assets/Chris-Evans-Marvel-Captain-America.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center right;
+  transform: rotate(90deg) translateX(-150px);
+}
+
+.faces:nth-child(4) {
+  background-image: url(./assets/maxresdefault.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center left;
+  transform: rotate(90deg) translateX(150px);
+}
+
+.faces:nth-child(5) {
+  background-image: url(./assets/Natasha-RomanoffBlack-Widow.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center bottom;
+  transform: rotate(90deg) translateX(-150px);
+}
+
+.faces:nth-child(6) {
+  background-image: url(./assets/jeremy-renner-hawkeye.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center bottom;
+  transform: rotate(90deg) translateX(150px);
+}
