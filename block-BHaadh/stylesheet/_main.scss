@@ -8,53 +8,95 @@ html {
 }
 
 body {
-  background: linear-gradient(0.30turn, #3f87a6, #ebf8e1, #f69d3c);
-}
-header {
-  padding: 1rem;
-  h1 {
-    font-size: 2rem;
-    color: rgb(78, 76, 76);
-    text-align: center;
-    text-decoration: underline;
-  }
+  display: flex;
+  justify-content: center;
+  perspective: 600px;
+  min-height: 100vh;
+  transition: all 3s;
+  background-color: #f69d3c;
+  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  
 }
 
-.spin {
-  cursor: pointer;
+body:hover {
+    perspective: 900px;
+  }
+
+.avengers {
+  margin-top: 5rem;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  transition: all 10s;
+  transform: rotateZ(0) rotateX(0) rotateY(0);
   transform-style: preserve-3d;
 }
-.spin:hover {
-  animation: spin 5s linear infinite;
+
+.avengers:hover {
+  transform: rotateZ(0deg) rotateX(90deg) rotateY(310deg);
 }
-@keyframes spin {
-  0% {
-    transform: rotateY(0deg);
-  }
-  100% {
-    transform: rotateY(360deg);
-  }
-}
-.cube {
-  position: relative;
-  width: 95px;
-}
-.side {
-  height: 95px;
-  line-height: 95px;
+.faces {
   position: absolute;
-  text-align: center;
-  width: 95px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 3s;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.top {
-  background: #33cc54;
-  transform: rotate(-45deg) skew(15deg, 15deg);
+.faces:nth-child(1) {
+  background-image: url(./assets/IRON-2008-d7a2706.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center top;
+  transform: rotate(90deg) translateX(-150px);
 }
-.left {
-  background: #2db34a;
-  transform: rotate(15deg) skew(15deg, 15deg) translate(-50%, 100%);
+
+.faces:nth-child(2) {
+  background-image: url(./assets/the-details-hidden-in-Thor-1-and-2.img.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center left;
+  transform: rotate(90deg) translateX(-150px);
 }
-.right {
-  background: #26973e;
-  transform: rotate(-15deg) skew(-15deg, -15deg) translate(50%, 100%);
+
+.faces:nth-child(3) {
+  background-image: url(./assets/Chris-Evans-Marvel-Captain-America.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center right;
+  transform: rotate(90deg) translateX(-150px);
+}
+
+.faces:nth-child(4) {
+  background-image: url(./assets/maxresdefault.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center left;
+  transform: rotate(90deg) translateX(150px);
+}
+
+.faces:nth-child(5) {
+  background-image: url(./assets/Natasha-RomanoffBlack-Widow.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center bottom;
+  transform: rotate(90deg) translateX(-150px);
+}
+
+.faces:nth-child(6) {
+  background-image: url(./assets/jeremy-renner-hawkeye.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center bottom;
+  transform: rotate(90deg) translateX(150px);
 }
